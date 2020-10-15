@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         Button kontak = findViewById(R.id.kontak);
         Button gambar = findViewById(R.id.gambar);
         Button musik = findViewById(R.id.musik);
-        Button kamera = findViewById(R.id.kamera);
         Button browser = findViewById(R.id.browser);
         Button youtube = findViewById(R.id.youtube);
 
@@ -49,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                 startActivityForResult(intent, PICK_CONTACT);
+            }
+        });
+
+        gambar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
+                startActivity(intent);
             }
         });
     }
