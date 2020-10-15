@@ -59,6 +59,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        musik.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MediaStore.INTENT_ACTION_MUSIC_PLAYER);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
