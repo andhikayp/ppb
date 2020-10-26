@@ -52,6 +52,13 @@
                 android:layout_gravity="center"
                 android:background="@null"
                 android:src="@drawable/gallery"/>
+            <ImageButton
+                android:id="@+id/benar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/loading" />
         </LinearLayout>
     </LinearLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
